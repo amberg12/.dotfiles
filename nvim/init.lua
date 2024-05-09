@@ -1,5 +1,5 @@
 -- nvim config file
--- This file is licensed under the Do What The Fuck You Want To Public License.
+-- This file is licensed under the BSD Zero Clause License.
 
 vim.cmd("set expandtab")
 vim.cmd("set tabstop=4")
