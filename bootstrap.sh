@@ -3,7 +3,7 @@
 # A bootstrap script to setup the .dotfiles folder.
 # This file is licensed under the Do What The Fuck You Want To Public License.
 
-read -n1 -p "Would you like to install the nvim config (will overwrite)? [Y/n]" isntnvim
+read -n1 -p "Would you like to install the nvim config (will overwrite)? [Y/n]" instnvim
 case $instnvim in
     y|Y)
         echo "Deleting config..."
