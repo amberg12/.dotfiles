@@ -24,3 +24,4 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 
 vim.wo.relativenumber = true
+vim.g.mapleader = '\\'
