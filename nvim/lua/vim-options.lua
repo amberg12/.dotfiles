@@ -23,5 +23,6 @@ vim.api.nvim_create_autocmd("FileType", {
   end,
 })
 
+vim.g.c_syntax_for_h = true
 vim.wo.relativenumber = true
 vim.g.mapleader = "\\"
