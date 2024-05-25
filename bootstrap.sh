@@ -4,14 +4,34 @@
 # This file is licensed under the BSD Zero Clause License. 
 
 read -n1 -p "Would you like to install the nvim config (will overwrite)? [Y/n]" instnvim
-echo "\n"
+echo ""
 case $instnvim in
     y|Y)
-        echo "Deleting config...\n"
         rm -r -f ~/.config/nvim 
-	ln -s $(pwd)/nvim ~/.config/nvim
+        ln -s $(pwd)/nvim ~/.config/nvim
+        echo "Installed nvim config."
         ;;
     *) # Take everything else to be a no
-        echo "Skipping nvim config...\n"
+        echo "Skipping nvim config..."
+        ;;
+esac
+
+read -n1 -p "Would you like to install the tmux config (will overwrite)? [Y/n]" insttmux
+echo ""
+case $insttmux in
+    y|Y)
+        rm -r -f ~/.tmux.conf
+        ln -s $(pwd)/.tmux.conf ~/.tmux.conf
+
+        # Attempt to set the source file.
+        if ! tmux source-file ~/.tmux.conf
+        then
+            echo "Failed to set tmux source file"
+        fi
+
+        echo "Installed tmux config."
+        ;;
+    *) # Take everything else to be a no
+        echo "Skipping tmux config..."
         ;;
 esac
