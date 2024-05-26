@@ -49,3 +49,16 @@ case $instbashrc in
         ;;
 esac
 
+read -n1 -p "Would you like to install the starship config (will overwrite)? [Y/n]" instarship
+echo ""
+case $instarship in
+    y|Y)
+        rm -r -f ~/.config/starship.toml
+        ln -s $(pwd)/starship.toml ~/.config/starship.toml
+        echo "Installed starship config"
+        ;;
+    *)
+        echo "Skipping starship config"
+        ;;
+esac
+

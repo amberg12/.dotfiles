@@ -11,6 +11,8 @@ esac
 # Personal aliases.
 alias :q="exit" # vim nerd!!
 alias ..="cd .."
+alias ...="cd ..."
+alias ~="cd ~"
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -119,3 +121,5 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+
+eval "$(starship init bash)"
