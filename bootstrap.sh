@@ -35,3 +35,17 @@ case $insttmux in
         echo "Skipping tmux config..."
         ;;
 esac
+
+read -n1 -p "Would you like to install the .bashrc config (will overwrite)? [Y/n]" instbashrc
+echo ""
+case $instbashrc in
+    y|Y)
+        rm -r -f ~/.bashrc
+        ln -s $(pwd)/.bashrc ~/.bashrc
+        echo "Installed .bashrc"
+        ;;
+    *)
+        echo "Skipping .bashrc"
+        ;;
+esac
+
