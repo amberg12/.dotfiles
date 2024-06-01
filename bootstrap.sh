@@ -62,3 +62,18 @@ case $instarship in
         ;;
 esac
 
+read -n1 -p "Would you like to install the alacritty config (will overwrite)? [Y/n]" instala
+echo ""
+case $instala in
+    y|Y)
+        # Dependency
+        git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+        rm -r -f ~/.alacritty.toml
+        ln -s $(pwd)/.alacritty.toml ~/.alacritty.toml
+        echo "Installed alacritty config"
+        ;;
+    *)
+        echo "Skipping alacritty config"
+        ;;
+esac
+
