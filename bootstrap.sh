@@ -77,3 +77,16 @@ case $instala in
         ;;
 esac
 
+read -n1 -p "Would you like to install the i3 config (will overwrite)? [Y/n]" insti3
+echo ""
+case $insti3 in
+    y|Y)
+        rm -r -f ~/.config/i3/config
+        ln -s $(pwd)/.config/i3/config ~/.config/i3/config
+        echo "Installed i3 config"
+        ;;
+    *)
+        echo "Skipping i3 config"
+        ;;
+esac
+
