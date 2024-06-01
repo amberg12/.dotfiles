@@ -11,7 +11,7 @@ esac
 # Personal aliases.
 alias :q="exit" # vim nerd!!
 alias ..="cd .."
-alias ...="cd ..."
+alias ...="cd ../.."
 alias ~="cd ~"
 
 # tmux
