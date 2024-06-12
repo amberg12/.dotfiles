@@ -126,3 +126,15 @@ if ! shopt -oq posix; then
 fi
 
 eval "$(starship init bash)"
+. "$HOME/.cargo/env"
+
+# add Flatpak apps to PATH
+if [ -d "/var/lib/flatpak/exports/bin" ]; then
+    PATH="/var/lib/flatpak/exports/bin:$PATH"
+fi
+
+if [ -d "$HOME/.local/share/flatpak/exports/bin" ]; then
+     PATH="$HOME/.local/share/flatpak/exports/bin:$PATH"
+fi
+
+export PATH
