@@ -188,3 +188,8 @@ bindsym $mod+r mode "resize"
 bar {
         status_command i3status
 }
+
+#interactive screenshot by pressing printscreen
+bindsym Print exec gnome-screenshot -i 
+#crop-area screenshot by pressing Mod + printscreen
+bindsym $mod+Print exec gnome-screenshot -a

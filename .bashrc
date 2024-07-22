@@ -138,3 +138,4 @@ if [ -d "$HOME/.local/share/flatpak/exports/bin" ]; then
 fi
 
 export PATH
+export PATH=/home/amber/.local/bin:/var/lib/flatpak/exports/bin:/home/amber/.cargo/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
