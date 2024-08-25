@@ -20,9 +20,19 @@ alias ...............="cd ..............."
 export VISUAL=nvim
 export EDITOR=nvim
 
+# Binds
+
 # Enable colors, change prompt
 autoload -U colors && colors
-PS1="[%/] $ "
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+zstyle ':vcs_info:git:*' formats '%F{240}(%b) '
+zstyle ':vcs_info:*' enable git
+PS1="[%1~] "
+PS1+=\$vcs_info_msg_0_
+PS1+="$ "
 
 # History
 HISTSIZE=10000
