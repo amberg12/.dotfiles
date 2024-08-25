@@ -9,6 +9,10 @@ return {
     "catppuccin/nvim",
     name = "catppuccin",
     priority = 1000,
+  },
+  {
+    "p00f/alabaster.nvim",
+    priority = 1000,
   }
 }
 
