@@ -18,3 +18,10 @@ vim.keymap.set("n", "<leader>p", "\"+p")
 vim.keymap.set("v", "<leader>p", "\"+p")
 
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
+
+-- Obsidian scratchpad location for when I don't want to switch from my neovim
+-- workflow.
+vim.keymap.set("n",
+               "<leader>sp",
+               "<cmd>:e ~/Obsidian/scratchpad.md<CR>",
+               { silent = true })

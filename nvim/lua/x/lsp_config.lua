@@ -19,13 +19,20 @@ cmp.setup({
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = { "lua_ls", "clangd" },
+  ensure_installed = { "lua_ls", "clangd", "rust_analyzer" },
   handlers = {
     function(server_name)
       if server_name == 'lua_ls' then
         require('lspconfig').lua_ls.setup({
           -- Lisp looking line
           settings = { Lua = { diagnostics = { globals = { "vim" } } } }
+        })
+      elseif server_name == 'rust_analyzer' then
+        require('lspconfig').rust_analyzer.setup({
+          settings = {
+            ["rust-analyzer"] = {
+              cargo = { allFeatures = true, }
+            } },
         })
       else
         -- Most plugins can be automatically configured like this.
@@ -34,3 +41,4 @@ require('mason-lspconfig').setup({
     end
   }
 })
+
