@@ -18,9 +18,6 @@ fi
 rm -r -f ~/.bashrc
 ln -s $(pwd)/.bashrc ~/.bashrc
 
-rm -r -f ~/.config/starship.toml
-ln -s $(pwd)/starship.toml ~/.config/starship.toml
-
 git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
 rm -r -f ~/.alacritty.toml
 ln -s $(pwd)/.alacritty.toml ~/.alacritty.toml

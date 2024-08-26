@@ -126,7 +126,6 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(starship init bash)"
 . "$HOME/.cargo/env"
 
 # add Flatpak apps to PATH
