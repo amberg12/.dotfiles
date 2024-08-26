@@ -9,9 +9,10 @@ general {
 order += "battery 0"
 order += "cpu_usage"
 order += "memory"
+order += "tztime local"
 
 battery 0 {
-	format = " battery: %status %percentage "
+	format = " BAT: %status %percentage "
 	status_chr = " CHARGING "
 	status_unk = " UNKNOWN "
 	status_full = " FULL "
@@ -24,4 +25,8 @@ cpu_usage {
 
 memory {
 	format = " %available (USED: %used) "
+}
+
+tztime local {
+	format = " %Y-%m-%d - %H:%M:%S "
 }
