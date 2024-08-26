@@ -15,6 +15,8 @@ alias .............="cd ............."
 alias ..............="cd .............."
 alias ...............="cd ..............."
 
+alias la="ls -A"
+
 # Exports
 
 export VISUAL=nvim

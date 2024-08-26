@@ -27,6 +27,8 @@ ln -s $(pwd)/.alacritty.toml ~/.alacritty.toml
 
 rm -r -f ~/.config/i3/config
 ln -s $(pwd)/.config/i3/config ~/.config/i3/config
+rm -r -f ~/.config/i3/bar
+ln -s $(pwd)/.config/i3/bar ~/.config/i3/bar
 
 rm -r -f ~/.zshrc
 ln -s $(pwd)/.zshrc ~/.zshrc
