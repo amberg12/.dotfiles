@@ -12,6 +12,8 @@ export EDITOR=$VISUAL
 #
 # Autocompletion, syntax highlighting ect
 #
+
+set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
 
@@ -34,7 +36,7 @@ generate-ps1-branch-part() {
 	echo "$branch_prompt"
 }
 
-export PS1="[\u@\h \w\$(generate-ps1-branch-part)] $ "
+export PS1="\[\033[01;1m\][ \[\033[01;32m\]\u@\h \w\$(generate-ps1-branch-part)\[\033[00m\] \[\033[01;1m\]] \[\033[01;1m\]\$ \[\033[00m\]"
 
 if [ -f ~/.config/.bash_aliases ]
 then
