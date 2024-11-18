@@ -4,6 +4,10 @@
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
+vim.opt.hlsearch = false
+vim.opt.incsearch = true
+vim.opt.scrolloff = 4
+vim.opt.colorcolumn = "80"
 --
 -- Vim remaps
 --

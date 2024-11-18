@@ -16,6 +16,7 @@ export EDITOR=$VISUAL
 set -o vi
 bind 'set show-all-if-ambiguous on'
 bind 'TAB:menu-complete'
+bind -x '"\C-l": clear'
 
 #
 # Generate prompt
@@ -36,7 +37,7 @@ generate-ps1-branch-part() {
 	echo "$branch_prompt"
 }
 
-export PS1="\[\033[01;1m\][ \[\033[01;32m\]\u@\h \w\$(generate-ps1-branch-part)\[\033[00m\] \[\033[01;1m\]] \[\033[01;1m\]\$ \[\033[00m\]"
+export PS1="\[\033[01;1m\][ \[\033[01;32m\]\u@\h \W\$(generate-ps1-branch-part)\[\033[00m\] \[\033[01;1m\]] \[\033[01;1m\]\$ \[\033[00m\]"
 
 if [ -f ~/.config/.bash_aliases ]
 then
