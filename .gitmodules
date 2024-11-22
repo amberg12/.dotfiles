@@ -1,0 +1,6 @@
+[submodule "emacs/.config/emacs/alabaster-emacs"]
+	path = emacs/.config/emacs/alabaster-emacs
+	url = https://github.com/uzhne/alabaster-emacs.git
+[submodule "emacs/.emacs.d/almost-mono-themes"]
+	path = emacs/.emacs.d/almost-mono-themes
+	url = https://github.com/cryon/almost-mono-themes
