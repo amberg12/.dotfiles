@@ -13,3 +13,8 @@ alias ......="cd ../../../../.."
 alias .......="cd ../../../../../.."
 alias ........="cd ../../../../../../.."
 alias .........="cd ../../../../../../../.."
+
+if fastfetch -v 1>/dev/null 2>/dev/null
+then
+	alias neofetch=fastfetch
+fi

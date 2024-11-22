@@ -46,3 +46,4 @@ fi
 
 
 eval "$(thefuck --alias)"
+. "$HOME/.cargo/env"

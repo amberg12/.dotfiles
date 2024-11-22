@@ -1,0 +1,29 @@
+(setq custom-file "~/.emacs.custom.el")
+(load-file "~/.emacs.custom.el")
+
+(require 'package)
+(add-to-list 'package-archives
+	     '("mepla" . "https://mepla.org/packages"))
+(package-initialize)
+
+(when (not package-archive-contents)
+  ;; Only refresh if needed
+  (package-refresh-contents))
+
+(unless (package-installed-p 'evil)
+  (package-install 'evil))
+
+;; Evil
+(require 'evil)
+(evil-mode 1)
+
+;; Emacs options
+(scroll-bar-mode -1)
+(setq display-line-numbers-type 'relative)
+(global-display-line-numbers-mode)
+
+(add-to-list 'default-frame-alist '(font . "ComicShannsMono Nerd Font 18"))
+(set-face-attribute 'default t :font "ComicShannsMono Nerd Font 18")
+
+(tool-bar-mode -1)
+(menu-bar-mode -1)
