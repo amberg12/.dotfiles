@@ -15,6 +15,9 @@
 
 (set-frame-font "JetBrainsMono NF 18" nil t)
 
+;; Emacs has really dumb indentation by default.
+
+
 ;; Setup package-manager
 (require 'package)
 (setq package-archives '(("melpa" . "https://melpa.org/packages/")
