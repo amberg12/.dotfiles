@@ -36,7 +36,6 @@
   (evil-mode 1))
 
 ;; Setup colorscheme
-(add-to-list 'custom-theme-load-path "~/.config/emacs/themes")
 (use-package almost-mono-themes
   :config
   (add-hook 'after-init-hook
