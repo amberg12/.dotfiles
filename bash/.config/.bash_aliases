@@ -18,3 +18,9 @@ if fastfetch -v 1>/dev/null 2>/dev/null
 then
 	alias neofetch=fastfetch
 fi
+
+if ! type vim 1>/dev/null 2>/dev/null
+then
+	# Usually vi is just vim anyway
+	alias vim=vi
+fi
