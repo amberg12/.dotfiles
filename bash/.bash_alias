@@ -1,0 +1,15 @@
+alias ls="ls --color=auto"
+alias la="ls --color=auto -a"
+alias ll="ls --color=auto -l"
+alias lla="ls --color=auto -la"
+
+alias grep="grep --color=auto"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ......="cd ../../../../.."
+alias .......="cd ../../../../../.."
+alias ........="cd ../../../../../../.."
+alias .........="cd ../../../../../../../.."
