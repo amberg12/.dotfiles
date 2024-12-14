@@ -59,3 +59,12 @@
 
 (use-package swiper
   :ensure t)
+
+;;; Configure which-key
+(use-package which-key
+  :init (which-key-mode)
+  :diminish which-key-mode
+  :config
+  ;; The delay should be increased as I get more comfortable with emacs, and
+  ;; being able to explore becomes less important.
+  (setq which-key-idle-delay 0.3))
