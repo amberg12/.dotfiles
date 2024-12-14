@@ -78,3 +78,16 @@
 	 ("C-r" . 'counsel-minibuffer-history))
   :config
   (setq ivy-initial-inputs-alist nil))
+
+;;; Configure projectile
+(use-package projectile
+  :diminish projectile-mode
+  :config (projectile-mode)
+  :bind-keymap
+  ("C-c p" . projectile-command-map)
+  :init
+  (when (file-directory-p "~/Projects")
+    (setq projectile-project-search-path '("~/Projects")))
+  (when (file-directory-p "~/Cardiff") ; University files
+    (setq projectile-project-search-path '("~/Cardiff")))
+  (setq projectile-switch-project-action #'projectile-dired))
