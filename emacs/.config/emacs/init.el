@@ -68,3 +68,13 @@
   ;; The delay should be increased as I get more comfortable with emacs, and
   ;; being able to explore becomes less important.
   (setq which-key-idle-delay 0.3))
+
+;;; Configure counsel
+(use-package counsel
+  :bind (("M-x" . counsel-M-x)
+	 ("C-c b" . counsel-ibuffer)
+	 ("C-c C-f" . counsel-find-file)
+	 :map minibuffer-local-map
+	 ("C-r" . 'counsel-minibuffer-history))
+  :config
+  (setq ivy-initial-inputs-alist nil))
