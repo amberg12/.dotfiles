@@ -8,7 +8,11 @@
 (set-frame-font "JetBrainsMono Nerd Font Mono 22" nil t)
 
 (column-number-mode 1)
-(display-line-numbers-mode 1)
+(global-display-line-numbers-mode 1)
+;; Some modes should not have line numbers.
+(dolist (mode '(term-mode-hook
+		eshell-mode-hook))
+  (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
 ;;; Move custom to different location on system
 (setq custom-file "~/.config/emacs/custom-file.el")
