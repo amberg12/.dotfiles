@@ -7,6 +7,9 @@
 
 (set-frame-font "JetBrainsMono Nerd Font Mono 22" nil t)
 
+(column-number-mode 1)
+(display-line-numbers-mode 1)
+
 ;;; Move custom to different location on system
 (setq custom-file "~/.config/emacs/custom-file.el")
 (load-file custom-file)
