@@ -1,6 +1,6 @@
 # Emacs files
 *~
-.#*
-#*#
+*.#*
+*#*#
 
 emacs/.config/emacs/elpa
