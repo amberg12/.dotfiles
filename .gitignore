@@ -5,4 +5,6 @@
 
 *.elc
 emacs/.config/emacs/elpa
+emacs/.config/emacs/games
+emacs/.config/emacs/transient
 emacs/.config/emacs/projectile-bookmarks.eld
