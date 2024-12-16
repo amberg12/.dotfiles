@@ -11,6 +11,7 @@
 (global-display-line-numbers-mode 1)
 ;; Some modes should not have line numbers.
 (dolist (mode '(term-mode-hook
+		org-mode-hook
 		eshell-mode-hook))
   (add-hook mode (lambda () (display-line-numbers-mode 0))))
 
@@ -111,9 +112,7 @@
 (defun amber/org-mode-setup ()
   (org-indent-mode)
   (auto-fill-mode 0)
-  (visual-line-mode 1)
-  (set-face-attribute 'org-code nil :inherit '(shadow))
-  (set-face-attribute 'org-verbatim nil :inherit '(shadow)))
+  (visual-line-mode 1))
 
 (use-package org
   :hook (org-mode . amber/org-mode-setup)
@@ -125,6 +124,14 @@
   :hook (org-mode . org-bullets-mode)
   :custom
   (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
+(defun amber/org-mode-visual-fill ()
+  (setq visual-fill-column-width 80
+        visual-fill-column-center-text t)
+  (visual-fill-column-mode 1))
+
+(use-package visual-fill-column
+  :hook (org-mode . amber/org-mode-visual-fill))
 
 ;;; Add C style config
 ;; Shamelessly stolen from https://devkernel.io/posts/kernel-dev-setup-editor/#linux-kernel-coding-style
