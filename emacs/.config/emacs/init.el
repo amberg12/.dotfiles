@@ -18,6 +18,9 @@
 (setq custom-file "~/.config/emacs/custom-file.el")
 (load-file custom-file)
 
+;;; Prevent emacs from cluttering other places with it's own files
+(setq auto-save-default nil)
+
 ;;; Initialise package system
 (require 'package)
 
