@@ -106,6 +106,26 @@
   :custom
   (magit-display-buffer-function #'magit-display-buffer-same-window-except-diff-v1))
 
+;;; Initialise org-mode
+
+(defun amber/org-mode-setup ()
+  (org-indent-mode)
+  (auto-fill-mode 0)
+  (visual-line-mode 1)
+  (set-face-attribute 'org-code nil :inherit '(shadow))
+  (set-face-attribute 'org-verbatim nil :inherit '(shadow)))
+
+(use-package org
+  :hook (org-mode . amber/org-mode-setup)
+  :config
+  (setq org-ellipsis " ▼"))
+
+(use-package org-bullets
+  :after org
+  :hook (org-mode . org-bullets-mode)
+  :custom
+  (org-bullets-bullet-list '("◉" "○" "●" "○" "●" "○" "●")))
+
 ;;; Add C style config
 ;; Shamelessly stolen from https://devkernel.io/posts/kernel-dev-setup-editor/#linux-kernel-coding-style
 (defun linux-kernel-coding-style/c-lineup-arglist-tabs-only (ignored)
@@ -139,3 +159,4 @@
       (c-set-style "linux-kernel"))))
 
 (add-hook 'c-mode-hook 'linux-kernel-coding-style/setup)
+
