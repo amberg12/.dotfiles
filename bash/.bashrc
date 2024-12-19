@@ -39,3 +39,9 @@ git-ps1-branch-name() {
 }
 
 PS1='[\u@\h \w$(git-ps1-branch-name)] $ '
+
+# Sourcing packages that are strange.
+eval "$(thefuck --alias)" 2>/dev/null
+. "$HOME/.cargo/env" 2>/dev/null
+[[ $PS1 && -f /usr/share/bash-completion/bash_completion ]] && \
+    . /usr/share/bash-completion/bash_completion
