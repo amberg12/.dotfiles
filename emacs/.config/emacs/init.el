@@ -1,3 +1,7 @@
+;; We fiddle with the gc threshold to reduce startup times.
+(setq gc-cons-threshold (* 50 1000 1000))
+
+;; Settings
 (setq inhibit-startup-message t)
 
 (scroll-bar-mode -1)
@@ -147,3 +151,6 @@
   (setq vterm-max-scrollback 10000))
 
 (global-set-key (kbd "C-c C-v") 'vterm)
+
+;; We return the GC settings to something more sensible.
+(setq gc-cons-threshold (* 2 1000 1000))
