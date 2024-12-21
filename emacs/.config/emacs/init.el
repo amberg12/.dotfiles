@@ -133,3 +133,17 @@
 (use-package visual-fill-column
   :hook (org-mode . amber/org-mode-visual-fill))
 
+;;; ;;; Initialise terminal modeds ;;; ;;;
+
+;;; Initiialise term
+(use-package term
+  :config
+  (setq explicit-shell-file-name "bash"))
+
+;;; Initialise vterm
+(use-package vterm
+  :commands vterm
+  :config
+  (setq vterm-max-scrollback 10000))
+
+(global-set-key (kbd "C-c C-v") 'vterm)
