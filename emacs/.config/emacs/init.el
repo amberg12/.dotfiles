@@ -137,6 +137,19 @@
 (use-package visual-fill-column
   :hook (org-mode . amber/org-mode-visual-fill))
 
+(use-package org-roam
+  :ensure t
+  :init
+  (unless (file-directory-p "~/OrgBrain")
+    (make-directory "~/OrgBrain"))
+  :custom
+  (org-roam-directory "~/OrgBrain")
+  :bind (("C-c n l" . org-roam-buffer-toggle)
+	 ("C-c n f" . org-roam-node-find)
+	 ("C-c n i" . org-roam-node-insert))
+  :config
+  (org-roam-setup))
+
 ;;; ;;; Initialise terminal modeds ;;; ;;;
 
 ;;; Initiialise term
