@@ -150,6 +150,17 @@
   :config
   (org-roam-setup))
 
+;; Embarrasing confession - I actually really like the obsidian graph mode and I
+;; was genuinely worried about missing it when switching over to
+;; org-mode/org-... ect ect.
+(use-package org-roam-ui
+  :after org-roam
+  :config
+  (setq org-roam-ui-sync t
+	org-roam-ui-follow t
+	org-roam-ui-update-on-save t
+	org-roam-ui-open-on-start t))
+
 ;;; ;;; Initialise terminal modeds ;;; ;;;
 
 ;;; Initiialise term
